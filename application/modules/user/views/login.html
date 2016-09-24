@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iniciar Sesión - {App_Name}</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/bootstrap/css/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="<?php echo site_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo site_url()?>assets/JQuery/jquery.validate.min.js"></script>
+	<script type="text/javascript">var site_url = "<?php echo site_url()?>"</script>
+	<script type="text/javascript" src="<?php echo site_url()?>user/assets/js/login/main.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-semi-transparent navbar-highlight-aquamarine">
+		<div class="container nav-container">
+			<h1 class="l-box-content">{App_Name}</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-lg-4" style="padding:20px;">
+			<a href="{facebook_link}" id="inicia_sesion" class="btn btn-primary" onlogin="checkLoginState();">Inicia sesión con Facebook</a>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="col-lg-4" style="padding:20px;">
+			<label>O inicia sesión con los datos de tu cuenta</label>
+		</div>
+	</div>
+	<div class="container message">
+		<label id="message"></label>
+	</div>
+	<div class="container">
+		<form id="login_form" method="POST">
+			<div class="form-group">
+				<input type="text" name="usuario_email" id="usuario_email" class="form-control" placeholder="Usuario o email" data-msg-required="Por favor, introduce tu usuario o email." data-msg-maxlenght="El usuario o email no puede superar los 200 caracteres." data-msg-minlength="El usuario o email debe tener 4 caracteres como mínimo." maxlenght="200" required>
+			</div>
+			<div class="form-group">
+				<input type="password" name="passw" id="passw" class="form-control" placeholder="Contraseña" data-msg-required="Por favor, introduce tu contraseña." data-msg-minlength="La contraseña debe tener al menos 6 caracteres." data-msg-maxlenght="La contraseña no puede tener más de 40 caracteres." minlength="6" maxlenght="40" required>
+			</div>
+			<input type="submit" id="submit" value="Regístrate" class="btn btn-default">
+		</form>
+		<div class="container">
+			<div>
+				<label>¿Olvidaste tu contraseña?</label>
+			</div>
+			<div>
+				<label>Hacé click <a href="<?php echo site_url()?>login/recuperar">acá</a> para reestablecerla</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!-- Header -->
+<header id="js-navbar" class="navbar navbar-default navbar-fixed-top navbar-semi-transparent navbar-highlight-aquamarine" role="banner">
+	<div class="container nav-container">
+		<div class="navbar-header">
+			<button id="boton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a  href="https://www.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Far%2Faccount%2Foverview%2F"  class="user-link hidden ">
+				<div class="user-icon-container img-circle navbar-user-img">
+					<svg class="user-icon"><use xlink:href="#user-icon"></svg>
+				</div>
+			</a>
+			<a class="navbar-brand" href="/ar/">
+				<span class="navbar-logo">Musicapp</span>
+			</a>
+		</div>
+		<nav class="collapse navbar-collapse" id="navbar-nav" role="navigation">
+			<ul class="nav navbar-nav navbar-right nav-main">
+				<li class="hidden " >
+					<a href="/ar/explore/" id="nav-link-Explore" data-ga-category="menu" data-ga-action="Explore">
+					Explore
+					</a>
+				</li>
+				<li>
+					<a href="/ar/premium/?checkout=false" id="nav-link-premium" data-ga-category="menu" data-ga-action="premium">
+					Premium
+					</a>
+				</li>
+				<li >
+					<a href="https://support.spotify.com/?utm_source=www.spotify.com&amp;utm_medium=www_header" id="nav-link-help" data-ga-category="menu" data-ga-action="help">
+					Ayuda
+					</a>
+				</li>
+				<li >
+					<a href="/ar/download/"
+					id="nav-link-download"
+					class="js-goto-signup js-get-spotify js-gtm-event"
+					data-ga-category="menu"
+					data-ga-action="download"
+					data-gtm-event-name="download_spotify_button_clicked"
+					data-tracking='{"category": "download", "action": "download start", "label": "download-navbar"}'>
+					Descargar
+					</a>
+				</li>
+				<li role="separator" class="divider"></li>
+				<?php if($loggedin):?>
+				<li class="alternate sidepanel-item-small hidden-sm hidden-md hidden-lg">
+					<a href="/ar/premium/" id="nav-link-upgrade" data-ga-category="menu" data-ga-action="upgrade" style="animation-delay: 85ms;">
+					Subir de categoría
+					</a>
+				</li>
+				<li class="alternate sidepanel-item-small hidden-sm hidden-md hidden-lg">
+					<a href="/ar/premium/" id="nav-link-upgrade" data-ga-category="menu" data-ga-action="upgrade" style="animation-delay: 85ms;">
+					Cuenta
+					</a>
+				</li>
+				<li class="alternate sidepanel-item-small hidden-sm hidden-md hidden-lg">
+					<a href="/ar/premium/" id="nav-link-upgrade" data-ga-category="menu" data-ga-action="upgrade" style="animation-delay: 85ms;">
+					Cerrar Sesión
+					</a>
+				</li>
+				<?php else:?>
+				<li class="alternate sidepanel-item-small " >
+					<a href="/ar/signup/" id="nav-link-sign_up" data-ga-category="menu" data-ga-action="sign_up">
+					Registráte
+					</a>
+				</li>
+				<li class="alternate sidepanel-item-small">
+					<a  href="https://www.spotify.com/login?continue=https%3A%2F%2Fwww.spotify.com%2Far%2Faccount%2Foverview%2F"  id="header-login-link" class="user-link ">
+					<span class="user-text navbar-user-text">Iniciar Sesión</span>
+					</a>
+				</li>
+ 				<?php endif;
+				if($loggedin):
+					if($facebook):?>
+					<li class="dropdown alternate hidden-sidepanel hidden-xs">
+						<a href="/ar/account/overview/" class="user-link dropdown-toggle" data-toggle="dropdown">
+							<img class="user-img img-circle navbar-user-img" src="https://graph.facebook.com/<?php echo $id_usuario ?>/picture?width=64&amp;height=64" alt="<?php echo $name ?>">
+							<span class="user-text hidden-xs"><?php echo $name ?></span>
+							<svg class="svg-chevron-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use></svg>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li>
+								<a href="/ar/premium/" id="nav-link-upgrade" data-ga-category="menu" data-ga-action="upgrade">
+								Subir de categoría
+								</a>
+							</li>
+							<li>
+								<a href="/ar/account/overview/">Cuenta</a>
+							</li>
+							<li>
+								<a href="/ar/logout/">Cerrar Sesión</a>
+							</li>
+						</ul>
+					</li>
+	 				<?php else: ?>
+					<li class="dropdown alternate hidden-sidepanel hidden-xs">
+						<a href="/ar/account/overview/" class="user-link dropdown-toggle" data-toggle="dropdown">
+							<!-- <img class="user-img img-circle navbar-user-img" src="https://graph.facebook.com/picture?width=64&amp;height=64" alt="<?php echo $name ?>"> -->
+							<span class="user-text hidden-xs"><?php echo $name ?></span>
+							<svg class="svg-chevron-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use></svg>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li>
+								<a href="/ar/premium/" id="nav-link-upgrade" data-ga-category="menu" data-ga-action="upgrade">
+								Subir de categoría
+								</a>
+							</li>
+							<li>
+								<a href="/ar/account/overview/">Cuenta</a>
+							</li>
+							<li>
+								<a href="/ar/logout/">Cerrar Sesión</a>
+							</li>
+						</ul>
+					</li>
+	 				<?php endif; ?>
+ 				<?php endif; ?>
+  			</ul>
+		</nav>
+	</div>
+</header>

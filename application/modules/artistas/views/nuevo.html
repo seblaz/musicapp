@@ -1,0 +1,58 @@
+<div class="content-container">
+<h2>Nuevo artista</h2>
+<h4>Datos Generales:</h4>
+<?php echo form_open('artistas/nuevo_artista', array('id'=>'nuevo_form')); ?>
+
+<div class="form-group">
+	<input type="text" name="artista" id="artista" class="form-control" placeholder="Nombre Artístico" data-msg-required="Por favor, completá el nombre artístico." data-msg-maxlength="El nombre artístico no puede superar los 250 caracteres." required maxlength="250">
+</div>
+<div class="form-group" id="integrantes-container">
+	<label for="integrantes[]">Integrantes:</label>
+	<div class="first form-group">
+		<input type="text" name="integrantes[]" class="form-control" placeholder="Nombre y Apellido" data-msg-required="Por favor, completá el nombre del integrante." data-msg-maxlength="El nombre no puede superar los 250 caracteres." required maxlength="250">
+		<input type="text" name="rol[]" class="form-control" placeholder="Roles" data-msg-required="Por favor, completá el/los roles del integrante." data-msg-maxlength="El/los roles puede superar los 250 caracteres." required maxlength="250">
+	</div>
+</div>
+<div class="form-group">
+	<a class="integrantes-icon plus">
+		<span class="glyphicon glyphicon-plus" aria-hidden="false"></span>
+	</a>
+	<a class="integrantes-icon minus">
+		<span class="glyphicon glyphicon-minus" aria-hidden="false"></span>
+	</a>
+	<!-- <label id="integrantes-label">Integrantes</label> -->
+</div>
+<div class="form-group">
+	<select name="genero" id="genero" class="form-control" data-msg-required="Por favor, completá el género musical principal." required>
+		<option value="" selected disabled class="form-control">Principal género musical</option>
+		{generos}<option value="{id}">{genero}</option>{/generos}
+	</select>
+</div>
+<div class="form-group">
+	<input type="text" name="generos_secundarios" id="generos_secundarios" class="form-control" placeholder="Géneros secundarios/influyentes" data-msg-maxlength="Los géneros secundarios no pueden superar los 250 caracteres." maxlength="250">
+</div>
+<div class="form-group">
+	<input type="number" name="ano_inicio" id="ano_inicio" class="form-control" placeholder="Año de inicio" data-msg-required="Por favor, completa el año de inicio." min="1900" required>
+</div>
+
+<!-- <div class="form-group">
+	<input type="url" name="web" id="web" class="form-control" placeholder="Link a página web" data-msg-url="El link debe ser correcto.">
+</div>
+<div class="form-group">
+	<input type="url" name="facebook" id="facebook" class="form-control" placeholder="Link a facebook" data-msg-url="El link debe ser correcto.">
+</div>
+<div class="form-group">
+	<input type="url" name="twitter" id="twitter" class="form-control" placeholder="Link a twitter" data-msg-url="El link debe ser correcto.">
+</div>
+<div class="form-group">
+	<input type="url" name="instagram" id="instagram" class="form-control" placeholder="Link a instagram" data-msg-url="El link debe ser correcto.">
+</div>
+ -->
+
+
+<div class="form-group">
+	<input type="submit" value="Siguiente" class="btn btn-primary">
+</div>
+</form>
+
+</div>

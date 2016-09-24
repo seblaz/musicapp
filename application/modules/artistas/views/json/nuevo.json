@@ -1,0 +1,38 @@
+{
+	"title" : "MusicApp - Nuevo Artista",
+	"link_tags":["artistas/assets/css/nuevo.css"],
+	"script_tags":[
+		"assets/JQuery/jquery.validate.min.js",
+		"assets/JQuery/additional-methods.min.js",
+		"artistas/assets/js/nuevo.js"
+	],
+	"zones":{
+		"first_section":{
+			"module":"artistas",
+			"controller":"content",
+			"function":"nuevo_first_section",
+			"params":null
+		},
+		"middle_section":{
+			"module":"artistas",
+			"controller":"content",
+			"function":"nuevo_middle_section",
+			"params":null
+		}
+	},
+	"sidebar_options":[
+		{
+			"caption":"Mis artistas",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-th-list",
+			"icon":""
+		},
+		{
+			"caption":"Nuevo artista",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-plus",
+			"icon":"",
+			"class":"active"
+		}
+	]
+}

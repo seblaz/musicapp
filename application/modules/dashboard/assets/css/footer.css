@@ -1,0 +1,224 @@
+/*
+ * Footer
+ */
+footer{
+    background: #000;
+}
+
+@media(min-width:768px){
+	.footer {
+		padding: 80px 0 50px;
+	}
+}
+
+@media(max-width:768px){
+	.footer {
+		padding: 50px 0 20px;
+	}
+}
+
+/* Footer Logo */
+.footer .footer-logo>a {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+	/*background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20id%3D%22Layer_1%22%20style%3D%22…891-0.579%201.891-1.514%200-0.984-0.71-1.511-1.89-1.511z%22/%3E%3C/svg%3E');*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 89px;
+	height: 27px;
+	display: block;
+}
+
+@media (min-width: 768px){
+	.footer .footer-logo>a {
+		width: 132px;
+		height: 40px;
+		margin-bottom: 50px;
+	}
+}
+
+/* Footer Titles */
+.footer .nav-title {
+	color: #919496;
+	font-size: 12px;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+}
+
+@media (min-width: 768px){
+	.footer .nav-title {
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 768px){
+	.footer .nav-title {
+		margin: 50px 0 22px;
+	}
+}
+
+/* Footer Items*/
+.footer-default .nav a{
+	color: #fff;
+}
+.footer .nav a, .footer .nav-inverse a {
+	padding: .1875em 0;
+	margin-bottom: .75em;
+	display: inline-block;
+}
+.footer-default .nav a:focus, .footer-default .nav a:hover{
+	color: #9BF0FF;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+/* Footer Social Icons */
+.footer-default .col-social a {
+	background: #2e2f33;
+}
+.footer .col-social a {
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+	border-radius: 30px;
+}
+@media (min-width: 992px){
+	.footer .col-social a {
+		padding: 15px;
+	}
+}
+@media (max-width: 992px){
+	.footer .col-social a {
+		padding: 10px;
+	}
+}
+
+/* SVG */
+.footer-default .col-social a .social-icon {
+	fill: #fff;
+	width: 24px;
+	height: 24px;
+	transition: fill .2s;
+	display: block;
+}
+
+/* Footer Social Texts*/
+.footer .col-social a .social-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* Footer Social li*/
+.footer .col-social li {
+    float: left!important;
+    padding-left: 15px;
+}
+.footer .col-social li:first-child {
+    padding-left: 0;
+}
+
+/*Footer Social ul*/
+@media (min-width: 992px){
+	.footer .col-social .nav, .footer .col-social .nav-inverse {
+		float: right!important;
+	}
+}
+/* Footer Social div */
+.footer .col-social {
+	margin-top: 120px;
+}
+
+@media (min-width: 992px){
+	.footer .col-social {
+		margin-top: 20px;
+	}
+}
+
+/*
+ * Second Footer nav
+ */
+.footer .row-small {
+	margin-top: 20px;
+}
+@media (min-width: 992px){
+	:not(.footer-simple).footer .row-small {
+		margin-top: 100px;
+	}
+}
+.footer .market .media-body {
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 1;
+	width: auto;
+}
+@media (min-width: 768px){
+	.footer .market .media-body {
+		font-size: 12px;
+	}
+}
+/* Country flag */
+.flag-icon {
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	font-size: 18px;
+	height: 1em;
+	width: 1.33333333em;
+}
+/* Copyright div */
+.flag-icon-ar {
+	background-image: url(https://sp-bootstrap.global.ssl.fastly.net/7.3.0/images/flags/ar.svg);
+}
+.footer .market {
+	position: absolute;
+	top: -20px;
+	right: 15px;
+}
+.market {
+	color: #919496;
+}
+.footer .row-small a, .footer .row-small small {
+	font-size: 10px;
+}
+@media (min-width: 768px){
+	.footer .row-small a, .footer .row-small small {
+		font-size: 12px;
+	}
+}
+.footer-default .copyright {
+    color: #919496;
+}
+.footer .copyright {
+    display: block;
+    padding: 1em 0;
+}
+
+/* Left second footer div*/
+.footer .nav-small li a {
+	font-weight: 300;
+	padding: 1em .5em;
+	margin: 0;
+}
+.footer .nav-small li:first-child a {
+	padding-left: 0;
+}
+@media (min-width: 768px){
+	.footer .nav-small li a {
+		padding: 1em;
+	}
+}
+.footer-default .nav-small a, .footer-default .market {
+	color: #919496;
+}
+.footer .nav-small li {
+	float: left!important;
+}

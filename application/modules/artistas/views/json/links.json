@@ -1,0 +1,35 @@
+{
+	"title" : "MusicApp - Páginas externas",
+	"link_tags":["artistas/assets/css/links.css"],
+	"script_tags":[
+	],
+	"zones":{
+		"first_section":{
+			"module":"artistas",
+			"controller":"content",
+			"function":"links_first_section",
+			"params":null
+		},
+		"middle_section":{
+			"module":"artistas",
+			"controller":"content",
+			"function":"links_middle_section",
+			"params":null
+		}
+	},
+	"sidebar_options":[
+		{
+			"caption":"Mis artistas",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-th-list",
+			"icon":""
+		},
+		{
+			"caption":"Nuevo artista",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-plus",
+			"icon":"",
+			"class":"active"
+		}
+	]
+}

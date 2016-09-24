@@ -1,0 +1,66 @@
+<!-- Background -->
+<div class="bg-main">
+	<div class="bg-main-img lazy lazy-no-small" data-original="//d2c87l0yth4zbw-2.global.ssl.fastly.net/i/home/bg-albums.png" style="display: block; background-image: url(&quot;//d2c87l0yth4zbw-2.global.ssl.fastly.net/i/home/bg-albums.png&quot;);"></div>
+</div>
+<!-- Carrousel -->
+<div class="jumbotron carousel-container transparent">
+	<div class="container">
+		<div id="carousel-tour" class="carousel slide" data-ride="carousel" data-interval="false">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-tour" data-slide-to="0" class="js-button-hero-carousel-dots active"></li>
+				<li data-target="#carousel-tour" data-slide-to="1" class="js-button-hero-carousel-dots"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<h1><span class="text-white">Prueba Premium gratis durante 30 días.</span></h1>
+				</div>
+				<div class="item">
+					<h1><span class="text-white">Premium para toda tu familia.<br>Por solo $&nbsp;103,50.</span></h1>
+				</div>
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-tour" data-slide="prev">
+				<span class="carousel-btn glyphicon glyphicon-menu-left"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-tour" data-slide="next">
+				<span class="carousel-btn glyphicon glyphicon-menu-right"></span>
+				<span class="sr-only">
+				Siguiente
+				</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="container title-container">
+	La música que necesitas, dónde sea que estés.
+</div>
+<!-- Main Search Form -->
+<div class="transparent container">
+	<div class="row search-container">
+		<div class="form-group col-sm-3 col-md-3 col-lg-3">
+			<label for="ciudad" class="search-label">Tu ciudad</label>
+			<select name="ciudad" id="ciudad" class="form-control">
+				<option value="" selected=""></option>
+				{barrios}<option value="{id}">{barrio}</option>{/barrios}
+			</select>
+		</div>
+		<div class="form-group col-sm-3 col-md-3 col-lg-3">
+			<label for="genero" class="search-label">Género musial</label>
+			<select name="genero" id="genero" class="form-control">
+				<option value="" selected=""></option>
+				{generos}<option value="{id}">{genero}</option>{/generos}
+			</select>
+		</div>
+		<div class="form-group col-sm-4 col-md-4 col-lg-4">
+			<label for="artista" class="search-label">Artista, álbum o canción</label>
+			<input type="text" name="artista" id="artista" class="form-control" placeholder="Ej. Andrés Calamaro">
+		</div>
+		<div class="form-group col-sm-2 col-md-2 col-lg-2 search-button-container">
+			<input type="submit" id="submit" class="btn btn-primary form-control search-button" placeholder="Ej. Andrés Calamaro" value="Buscar">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrate - {App_Name}</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/bootstrap/css/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="<?php echo site_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo site_url()?>assets/JQuery/jquery.validate.min.js"></script>
+	<script type="text/javascript">var site_url = "<?php echo site_url()?>"</script>
+	<script type="text/javascript" src="<?php echo site_url()?>user/assets/js/registration/main.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-semi-transparent navbar-highlight-aquamarine">
+		<div class="container nav-container">
+			<h1 class="l-box-content">{App_Name}</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-lg-4" style="padding:20px;">
+			<a href="{facebook_link}" class="btn btn-primary">Registrate con Facebook</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-lg-4" style="padding:20px;">
+			<label>O con tu dirección de email</label>
+		</div>
+	</div>
+	<div class="container">
+		<label>
+		<?php if($error){echo "Algo ha salido mal, por favor carga tus datos nuevamente.";} ?>
+		</label>
+	</div>
+	<div class="container">
+		<?php echo form_open('user/register', array('id'=>'reg_form')); ?>
+			<div class="form-group">
+				<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" data-msg-required="Por favor, introduce tu nombre." data-msg-maxlenght="Por favor, introduce un nombre más corto." maxlenght="150" required>
+			</div>
+			<div class="form-group">
+				<input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" data-msg-required="Por favor, introduce tu apellido." data-msg-maxlenght="Por favor, introduce un apellido más corto." maxlenght="150" required>
+			</div>
+			<div class="form-group">
+				<input type="text" name="usuario" id="usuario" class="form-control" placeholder="Nombre de usuario" data-msg-required="Por favor, elige un nombre de usuario." data-msg-maxlenght="Por favor, elige un usuario más corto." data-msg-maxlenght="El nombre de usuario debe tener por lo menos 6 caracteres." minlenght="6" maxlenght="200" required>
+			</div>
+			<div class="form-group">
+				<input type="email" name="email" id="email" class="form-control" placeholder="Email" data-msg-required="Por favor, introduce tu email." data-msg-email="Por favor, introduce una dirección de email válida." required>
+			</div>
+			<div class="form-group">
+				<input type="text" name="emailconf" id="emailconf" class="form-control" placeholder="Confirma tu Email" data-msg-required="Por favor, confirma tu email." data-msg-email="Por favor, introduce una dirección de email válida." data-msg-equalTo="Las direcciones de email no coinciden." required equalTo="#email">
+			</div>
+			<div class="form-group">
+				<input type="password" name="passw" id="passw" class="form-control" placeholder="Contraseña" data-msg-required="Por favor, elige una contraseña." data-msg-minlenght="La contraseña debe tener al menos 6 caracteres." data-msg-maxlenght="La contraseña no puede tener más de 40 caracteres." required minlenght="6" maxlenght="40">
+			</div>
+			<div class="form-group">
+				<input type="password" name="passwconf" id="passwconf" class="form-control" placeholder="Confirma tu contraseña" data-msg-required="Por favor, confirma la contraseña." required data-msg-equalTo="Las contraseñas no coinciden." equalTo="#passw">
+			</div>
+			<label>Fecha de Nacimiento:</label>
+			<div class="row">
+				<div class="form-group col-md-4">
+					<input type="number" name="fecha_nacimiento[dia]" id="fecha_nacimiento_dia" class="form-control" placeholder="Día" data-msg-required="Por favor, introduce tu fecha de nacimiento." data-msg-min="Por favor, introduce un día válido." data-msg-maxlength="Por favor, introduce un día válido." required min="1" maxlength="2">
+				</div>
+				<div class="form-group col-md-4">
+					<select name="fecha_nacimiento[mes]" id="fecha_nacimiento_mes" class="form-control col-lg-4" data-msg-required="Por favor, introduce tu fecha de nacimiento." required>
+						<option value="" selected="" disabled="">Mes</option>
+						<option value="01">Enero</option>
+						<option value="02">Febrero</option>
+						<option value="03">Marzo</option>
+						<option value="04">Abril</option>
+						<option value="05">Mayo</option>
+						<option value="06">Junio</option>
+						<option value="07">Julio</option>
+						<option value="08">Agosto</option>
+						<option value="09">Septiembre</option>
+						<option value="10">Octubre</option>
+						<option value="11">Noviembre</option>
+						<option value="12">Diciembre</option>				
+					</select>
+				</div>
+				<div class="form-group col-md-4">
+					<input type="number" name="fecha_nacimiento[ano]" id="fecha_nacimiento_ano" class="form-control col-lg-4" placeholder="Año" data-msg-required="Por favor, introduce tu fecha de nacimiento." data-msg-min="Por favor, introduce un año válido." data-msg-maxlength="Por favor, introduce un año válido." required min="1900" maxlength="4">
+				</div>
+			</div>
+			<input type="submit" id="submit" value="Regístrate" class="btn btn-default">
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+	"title" : "MusicApp",
+	"zones":{
+		"middle_section":{
+			"module":"cuenta",
+			"controller":"content",
+			"function":"resumen_middle_section",
+			"params":null
+		},
+		"first_section":{
+			"module":"cuenta",
+			"controller":"content",
+			"function":"resumen_first_section",
+			"params":null
+		}
+	},
+	"sidebar_options":[
+		{
+			"caption":"Vista general de la cuenta",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-home",
+			"icon":""
+		},
+		{
+			"caption":"Editar Perfil",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-pencil",
+			"icon":""
+		},
+		{
+			"caption":"Artistas",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-music",
+			"icon":""
+		},
+		{
+			"caption":"Eventos",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-calendar",
+			"icon":""
+		},
+		{
+			"caption":"Establecimientos",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-map-marker",
+			"icon":""
+		}
+	]
+}

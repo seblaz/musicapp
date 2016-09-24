@@ -1,0 +1,115 @@
+<div class="content-wrapper">
+<h2>Nuevo Artista</h2>
+<p>Subí las fotos que querés que vean cuando te busquen!</p>
+
+<!-- <?php if(isset($facebook_photo_permission)):?>
+	<p>Podés publicar las fotos que subiste a Facebook, pero necesitamos los permisos adecuados:</p>
+	<div class="form-group">
+		<a class="btn btn-primary" href="{facebook_photo_permission}">Conceder permisos</a>
+	</div>
+<?php else:?>
+	<p>Fotos de Facebook:</p>
+	<section>
+	  <div class="gal-container row">
+	  <?php foreach($facebook_photos as $key => $source): ?>
+		<div class="col-md-4 col-sm-6 col-xs-6 gal-item">
+		  <div class="box">
+			<a href="#<?php echo $key; ?>" data-toggle="modal" data-target="#<?php echo $key; ?>">
+			  <img src="<?php echo $source['source']; ?>">
+			  <input type="checkbox" name="" value="">
+			</a>
+			<div class="modal fade" id="<?php echo $key; ?>" tabindex="-1" role="dialog">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				  <div class="modal-body">
+					<img src="<?php echo $source['source']; ?>">
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  <?php endforeach;?>
+	  </div>
+	</section>
+<?php endif;?>
+ -->
+<!-- <p>O bien podés subirlas directamente:</p> -->
+
+<p>Arrastrá tus fotos para ordenarlas. <span id="draginfo" class="glyphicon glyphicon-question-sign"></span></p>
+
+<form action="../descripcion_artista" method="POST" id="my-awesome-dropzone">
+	<input type="hidden" name="id_artista" id="id_artista" value="{id_artista}">
+	<div id="dZUpload" class="dropzone form-group">
+		<p class="dz-default dz-message">Hacé click para subir las fotos de tu banda</p>
+	</div>
+	<div class="form-group">
+		<textarea rows="7" class="form-control" name="descripcion" id="descripcion" placeholder="Sobre el artista" type="text" data-msg-required="Por favor, completá la descripción del artista." data-msg-maxlength="No puedes escribir mas de 2500 caracteres." required maxlength="2500"></textarea>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" type="submit">Siguiente</button>
+	</div>
+</form>
+<div id="content">
+</div>
+</div>
+
+<!-- <div>
+<img id="test" src="http://www.muysencillo.com/wp-content/uploads/2015/08/pelota-y-raqueta-de-tenis.jpg">
+</div>
+ -->
+
+<!-- <div class="slim-popover" data-state="on" style="opacity: 1;">
+	<div class="slim-image-editor">
+		<div class="slim-wrapper" style="width: 323px; height: 485px;">
+			<div class="slim-stage" style="opacity: 1;">
+				<div class="slim-crop-area" style="left: 0px; top: 134.583px; width: 323px; height: 215.333px;" data-dragging="false">
+					<div class="grid"></div>
+					<button class="n"></button>
+					<button class="s"></button>
+					<button class="e"></button>
+					<button class="w"></button>
+					<button class="ne"></button>
+					<button class="se"></button>
+					<button class="sw"></button>
+					<button class="nw"></button>
+					<button class="c"></button>
+				</div>
+			</div>
+			<div class="slim-image-editor-preview slim-crop-preview" style="opacity: 0.9999;">
+				<canvas class="slim-crop-blur" width="300" height="450" style="width: 323px; height: 485px;"></canvas>
+				<img class="slim-crop" src="" width="323" height="485" style="clip: rect(134.583px 323px 349.917px 0px);">
+			</div>
+		</div>
+		<div class="slim-btn-group">
+			<button class="slim-image-editor-btn slim-btn-cancel slim-btn-cancel" title="Cancel" type="button" data-action="cancel" style="opacity: 1;">Cancel</button>
+			<button class="slim-image-editor-btn slim-btn-confirm slim-btn-confirm" title="Confirm" type="button" data-action="confirm" style="opacity: 1;">Confirm</button>
+		</div>
+	</div>
+</div>
+ -->
+
+<!-- Modal -->
+<div class="modal fade" id="modal_crop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img id="crop-image" src="" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancelar-crop" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="confirmar-crop" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal_crop">
+  Launch demo modal
+</button>
+<button id="test">
+Test
+</button>
+

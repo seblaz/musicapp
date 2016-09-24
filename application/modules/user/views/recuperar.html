@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recuperar Contraseña - {App_Name}</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/bootstrap/css/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="<?php echo site_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo site_url()?>assets/JQuery/jquery.validate.min.js"></script>
+	<script type="text/javascript">var site_url = "<?php echo site_url()?>"</script>
+	<script type="text/javascript" src="<?php echo site_url()?>user/assets/js/login/recuperar.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-semi-transparent navbar-highlight-aquamarine">
+		<div class="container nav-container">
+			<h1 class="l-box-content">{App_Name}</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-lg-4" style="padding:20px;">
+			<h3>Recupera tu contraseña</h3>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col-lg-4" style="padding:20px;">
+			<label>Recuerda que también puedes iniciar sesión con <a href="{facebook_link}">Facebook</a></label>
+		</div>
+	</div>
+	<div class="container">
+		<label id="message"></label>
+	</div>
+	<div class="container">
+		<form id="recover_form" method="POST">
+			<div class="form-group">
+				<input type="email" name="email" id="email" class="form-control" placeholder="Ingresa tu email" data-msg-required="Por favor, introduce tu email." required>
+			</div>
+			<input type="submit" id="submit" value="Recuperar" class="btn btn-default">
+		</form>
+	</div>
+</body>
+</html>

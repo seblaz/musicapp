@@ -1,0 +1,19 @@
+.integrantes-icon>span{
+	position: relative;
+	top: 1px;
+	padding-right: 35px;
+	margin-left: 10px;
+	height: 30px;
+}
+#nuevo_form > div:nth-child(3) > a.integrantes-icon.minus > span{
+	margin-left: -20px;
+}
+.integrantes-icon:hover{
+	text-decoration: none;
+}
+.boton-integrantes{
+	margin-top: 10px;
+}
+#integrantes-label{
+	padding-left: 10px;
+}

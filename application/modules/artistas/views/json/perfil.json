@@ -1,0 +1,11 @@
+{
+	"title" : "MusicApp",
+	"script_tags":[""],
+	"link_tags":["artistas/assets/css/perfil.css"],
+	"content":{
+		"module":"artistas",
+		"controller":"content",
+		"function":"perfil",
+		"params":null
+	}
+}

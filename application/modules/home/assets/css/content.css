@@ -1,0 +1,148 @@
+/**
+ * General
+ */
+.transparent{
+	background:0;
+}
+.jumbotron {
+	text-align: center;
+}
+
+/*
+ * Carrousel
+ */
+.carousel-container{
+	padding-top: 100px;
+}
+@media(max-width: 768px){
+	.carousel-container{
+		padding-top: 60px;
+	}
+}
+.carousel-btn{
+	font-size: 50px;
+}
+.carousel-control{
+	width: 60px;
+	height: 50px;
+	background-image: none !important;
+}
+.left.carousel-control{
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	text-shadow: none;
+}
+.right.carousel-control{
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	text-shadow: none;
+}
+@media (max-width: 991px){
+	.left.carousel-control, .right.carousel-control {
+		bottom: -20px;
+		top: auto;
+	}
+}
+@media (max-width: 768px){
+	.carousel-btn{
+		font-size: 30px;
+	}
+	.carousel-control{
+		height: 30px;
+	}
+}
+/* Content*/
+h1, .jumbotron h1 {
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 1.2;
+	letter-spacing: -0.04em;
+	margin: 0 0 .25em;
+}
+@media (min-width: 768px){
+	h1, .jumbotron h1 {
+		font-size: 100px;
+	}
+}
+.text-white {
+    color: #fff;
+}
+/* Inner Slides*/
+.item{
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.carousel-inner>.item {
+	padding: 0 0 50px;
+}
+@media (min-width: 992px){
+	.carousel-inner>.item {
+		padding: 0 75px 50px;
+	}
+}
+/*
+ * Main Search
+ */
+.search-container{
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin: 20px auto;
+}
+@media (max-width:768px){
+	.search-container{
+		width: 300px;
+		margin: 20px auto;
+	}
+}
+@media (max-width:350px){
+	.search-container{
+		width: 90%;
+		margin: 20px auto;
+	}
+}
+@media (min-width:768px){
+	.search-container{
+		width: 98%;
+		margin: 20px auto;
+	}
+}
+@media (min-width:998px){
+	.search-container{
+		width: 90%;
+	}
+}
+.search-button-container{
+	line-height: 75px;
+	margin: 0;
+}
+.form-group{
+	margin-top: 10px;
+}
+@media(max-width: 768px){
+	.search-button-container{
+		line-height: 0;
+		margin-bottom: 15px;
+	}
+	.form-group.col-sm-3.col-md-3.col-lg-3:first-child{
+		margin-top: 15px;
+	}
+}
+.search-button{
+	margin: auto;
+}
+.search-label{
+	/*color: #e2d5d5;*/
+	/*color: #e2d5d5;*/
+}
+/*.cartel{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	line-height: 60px;
+	font-size: 20px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}*/

@@ -1,0 +1,11 @@
+{
+	"title" : "MusicApp",
+	"script_tags":["home/assets/js/home.js"],
+	"link_tags":["home/assets/css/content.css"],
+	"content":{
+		"module":"home",
+		"controller":"content",
+		"function":"pagina_principal",
+		"params":null
+	}
+}

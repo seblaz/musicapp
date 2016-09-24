@@ -1,0 +1,28 @@
+.social-icon-input{
+	width: 24px;
+	height: 24px;
+	transition: fill .2s;
+	display: block;
+	font-size: 22px;
+	color: #000;
+	fill: #000;
+}
+
+.input-group-addon{
+	padding: 3px 8px;
+	border-right: 0;
+}
+
+#links_form > div > span:nth-child(2){
+	border-left: 0;
+	width: 120px;
+	text-align: left;
+}
+
+.big-font{
+	font-size: 17px;
+}
+
+#publicar{
+	margin: 0;
+}

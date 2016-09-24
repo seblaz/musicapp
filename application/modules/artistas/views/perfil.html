@@ -1,0 +1,182 @@
+<script>
+	window.twttr = (function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0],
+		t = window.twttr || {};
+		if (d.getElementById(id)) return t;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "https://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js, fjs);
+		t._e = [];
+		t.ready = function(f) {
+		t._e.push(f);
+		};
+		return t;
+	}(document, "script", "twitter-wjs"));
+</script>
+
+<div class="container photos">
+
+		<!-- Fotos -->
+		<div id="carousel-example-generic" class="carousel slide col-sm-12" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<?php for($i = 1; $i < count($fotos); $i++):?>
+			<li data-target="#carousel-example-generic" data-slide-to="<?php echo $i;?>"></li>
+			<?php endfor;?>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <div class="image" style="
+				background-image:url(<?php echo $fotos[0]['url'];?>);
+				/*background-image: url(<?php echo $fotos[0]['url'];?>), -webkit-linear-gradient(rgba(0,0,0,.0001),rgba(0,0,0,.3));
+				background-image: url(<?php echo $fotos[0]['url'];?>), -o-linear-gradient(rgba(0,0,0,.0001),rgba(0,0,0,.3));
+				background-image: url(<?php echo $fotos[0]['url'];?>), -webkit-gradient(rgba(0,0,0,.0001),rgba(0,0,0,.3));
+				background-image: url(<?php echo $fotos[0]['url'];?>), linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.3),rgba(0,0,0,.5));*/
+			  	"></div>
+			</div>
+			<?php for($i = 1; $i < count($fotos); $i++):?>
+			<div class="item">
+			  <div class="image" style="
+				background-image:url(<?php echo $fotos[$i]['url'];?>);
+				/*background-image: url(<?php echo $fotos[$i]['url'];?>), -webkit-linear-gradient(rgba(0,0,0,.0001),rgba(0,0,0,.3));
+				background-image: url(<?php echo $fotos[$i]['url'];?>), -o-linear-gradient(rgba(0,0,0,.0001),rgba(0,0,0,.3));
+				background-image: url(<?php echo $fotos[$i]['url'];?>), -webkit-gradient(rgba(0,0,0,.0001),rgba(0,0,0,.3));
+				background-image: url(<?php echo $fotos[$i]['url'];?>), linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.3),rgba(0,0,0,.5));*/
+			  	"></div>
+			</div>
+			<?php endfor;?>
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+	</div>
+</div>
+<div class="container tabs">
+	<div class="row" role="navigation">
+
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+		  <li role="presentation" class="active"><a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a></li>
+		  <li role="presentation"><a href="#fechas" aria-controls="home" role="tab" data-toggle="tab">Fechas</a></li>
+		  <li role="presentation"><a href="#videos" aria-controls="home" role="tab" data-toggle="tab">Videos</a></li>
+		  <li role="presentation"><a href="#musica" aria-controls="home" role="tab" data-toggle="tab">Música</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active fade in" id="perfil">
+				<div id="descripcion_container" class="col-sm-6 col-xs-6 col-xxs">
+					<h2>{artista}</h2>
+					<div>
+						Género principal:
+						<label>
+						<span class="label label-primary">{genero}</span>
+						</label>
+					</div>
+					<div>
+						Géneros influyentes:
+						<label>
+						<span class="">{generos_secundarios}</span>
+						</label>
+					</div>
+					<div>
+						Año de inicio:
+						<label>
+						<span class="">{ano_inicio}</span>
+						</label>
+					</div>
+					<div class="descripcion-container">
+						Sobre {artista}: <label class="descripcion">
+						{descripcion}
+						</label>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-6 col-xxs">
+					<?php if(!empty($facebook)):?>
+					<div class="facebook-page-container">
+						<iframe src="https://www.facebook.com/plugins/page.php
+						?href=https%3A%2F%2Fwww.facebook.com%2F{facebook}
+						&tabs=timeline
+						&width=250
+						&height=400
+						&small_header=false
+						&adapt_container_width=true
+						&hide_cover=false
+						&show_facepile=true
+						&appId=1770709086477424" width="250" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+					<?php elseif(!empty($twitter)):?>
+					<div class="facebook-page-container">
+						<a class="twitter-timeline"
+							href="https://twitter.com/{twitter}"
+							width="400"
+							height="400">
+							Tweets por @{twitter}
+						</a>
+					</div>
+					<?php else:?>
+					<script type="text/javascript">
+						$('#descripcion_container').removeClass();
+						$('#descripcion_container').addClass('col-xs-12');
+					</script>
+					<?php endif;?>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="fechas">...</div>
+			<div role="tabpanel" class="tab-pane fade" id="videos">...</div>
+			<div role="tabpanel" class="tab-pane fade" id="musica">...</div>
+		</div>
+	</div>
+</div>
+
+				<!-- <div class="col-xs-6 col-xxs">
+					<?php if(!empty($facebook)):?>
+					<div class="facebook-like-container">
+						<iframe src="https://www.facebook.com/plugins/like.php
+						?href=https://www.facebook.com/{facebook}
+						&width=300
+						&layout=standard
+						&action=like
+						&size=small
+						&show_faces=true
+						&share=true
+						&show_faces=true
+						&appId=1770709086477424" width="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+					<?php endif; if(!empty($twitter)):?>
+					<div class="twitter-content">
+						<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=@{twitter}&hashtags={app_name}&url=" data-size="large">Tweet</a>
+						<a class="twitter-follow-button" href="https://twitter.com/{twitter}" data-show-count="false" data-show-screen-name="false" data-size="large">Follow @{twitter}</a>
+					</div>
+					<?php endif; if(!empty($instagram)):?>
+					<div class="instagram-content">
+						<style>
+							.ig-b- { display: inline-block; }
+							.ig-b- img { visibility: hidden; }
+							.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+							.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+							@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+							.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }
+						</style>
+						<a target="_blank" href="https://www.instagram.com/{instagram}" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+					</div>
+					<?php endif; if(!empty($web)):?>
+					<div class="web-container">
+						Página web:
+						<label>
+						<a target="_blank" href="http://{web}">{web}</a>
+						</label>
+					</div>
+					<?php endif;?>
+				</div> -->

@@ -1,0 +1,44 @@
+{
+	"title" : "MusicApp - Descripcion",
+	"link_tags":[
+		"https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css",
+		"https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/2.0.4/css/Jcrop.min.css",
+		"artistas/assets/css/descripcion.css"
+	],
+	"script_tags":[
+		"https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js",
+		"assets/JQuery/jquery-ui/jquery-ui.min.js",
+		"assets/JQuery/jquery.validate.min.js",
+		"artistas/assets/js/descripcion.js",
+		"https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/2.0.4/js/Jcrop.min.js"
+	],
+	"zones":{
+		"first_section":{
+			"module":"artistas",
+			"controller":"content",
+			"function":"nuevo_first_section",
+			"params":null
+		},
+		"middle_section":{
+			"module":"artistas",
+			"controller":"content",
+			"function":"descripcion_middle_section",
+			"params":null
+		}
+	},
+	"sidebar_options":[
+		{
+			"caption":"Mis artistas",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-th-list",
+			"icon":""
+		},
+		{
+			"caption":"Nuevo artista",
+			"href":"#",
+			"glyphicon":"glyphicon glyphicon-plus",
+			"icon":"",
+			"class":"active"
+		}
+	]
+}
